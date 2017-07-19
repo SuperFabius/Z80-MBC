@@ -3,4 +3,4 @@ Here are all the project files (SW & HW) of the Z80-MBC, a complete mini Z80 sys
 
 The complete project is published here: https://hackaday.io/project/19000-a-4-4ics-z80-homemade-computer-on-breadboard
 
-The PCB gerber files are here: https://github.com/WestfW/4chipZ80 (the PCB was made by Bill Westfield).
+The PCB gerber files are here: https://github.com/WestfW/4chipZ80 (the PCB was designed by Bill Westfield).
