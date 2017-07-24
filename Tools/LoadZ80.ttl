@@ -1,0 +1,35 @@
+;##############################################
+; Tera-Term Macro for Z80-MBC automated loading
+; by Just4Fun
+;##############################################
+
+;:commander
+;
+; Set working directory and the Intel-Hex file to load
+;
+setdir 'C:\Documents and Settings\Pippus\Desktop\tasm32\User'
+;
+; Set the temporary file to use for the upload
+;
+fileopen commandfile 'load.hex' 0
+;
+; Set the wait time for Z80-MBC boot completion
+;
+mpause 3000
+;
+; Send Intel-Hex file to load
+;
+:looper2
+filereadln commandfile statement
+if result goto fclose2
+sendln statement
+mpause 40
+if result = 2 then
+goto fclose2
+endif
+goto looper2
+;
+; Close file and exit
+;
+:fclose2
+fileclose commandfile
